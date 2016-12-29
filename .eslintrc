@@ -1,0 +1,7 @@
+{
+  "extends": ["airbnb-base"], //, "plugin:import/warnings"
+  "parser": "babel-eslint",
+  "env":{
+    "browser": true
+  }
+}

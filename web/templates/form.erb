@@ -1,0 +1,22 @@
+<form action="/" accept-charset="utf-8" method="POST">
+  <label for="haml">
+    Input
+    <abbr title="HTML abstraction markup language"><a href="http://haml.info">Haml</a></abbr>
+  </label>
+  <textarea class="code" id="haml" name="haml"><%= h params[:haml] %></textarea>
+
+  <div class="actions">
+    <button type="submit">Convert</button>
+    <label for="converter">using</label>
+    <%= select_tag 'converter', options_for_select({'herbalizer' => 'herbalizer',
+          'Haml gem (only HTML)' => 'haml_gem'}, params[:converter]) %>
+  </div>
+</form>
+<label for="erb">
+  Output
+  <abbr title="HyperText Markup Language"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></abbr>
+  <span id="with-erb"<%= ' class="hidden"' if params[:converter] == 'haml_gem' %>>
+    (with <abbr title="Embedded Ruby"><a href="https://en.wikipedia.org/wiki/ERuby">ERb</a></abbr>)
+  </span>
+</label>
+<textarea class="code" id="erb" name="erb"><%= h @erb %></textarea>

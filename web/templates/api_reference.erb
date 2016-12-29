@@ -1,0 +1,75 @@
+<% content_for(:meta_desc) do %>
+JSON API Reference
+<% end %>
+<% content_for(:title) do %>
+API Reference
+<% end %>
+<h4>Request</h4>
+<section>
+  <dl>
+    <dt>URL</dt>
+    <dd>
+      <strong>
+        <code>
+          https://haml2erb.org/api/convert
+        </code>
+      </strong>
+    </dd>
+    <dt>Method</dt>
+    <dd><strong><code>POST</code></strong></dd>
+    <dt>Parameters</dt>
+    <dd>
+      <dl>
+        <dt><strong><code>haml</code></strong></dt>
+        <dd>Haml to be convert</dd>
+        <dt><strong><code>converter</code></strong></dt>
+        <dd>
+          <a href="https://github.com/danchoi/herbalizer"><code>herbalizer</code></a>
+          or
+          <a href="http://haml.info"><code>haml_gem</code></a>
+          <small>
+            (Only <abbr title="HyperText Markup Language">HTML</abbr> output using
+            <a href="http://haml.info/docs/yardoc/Haml/Options.html#suppress_eval-instance_method">
+              <code>--suppress-eval</code> option
+            </a>)
+          </small>
+        </dd>
+      </dl>
+    </dd>
+  </dl>
+</section>
+<hr/>
+<h4>Success response example</h4>
+<section>
+  <dl>
+    <dt>HTTP Status</dt>
+    <dd><code><strong>200</strong></code></dd>
+    <dt>JSON body</dt>
+    <dd>
+      <code style="color:#586e75">
+        {
+          success: <span style="color:#b58900">true</span>,
+          erb: <span style="color:#269186"><span style="color:#c60000">"</span>&lt;!DOCTYPE html&gt;<span style="color:#c60000">"</span></span>
+        }
+      </code>
+    </dd>
+  </dl>
+</section>
+<hr/>
+<h4>Error response example</h4>
+<section>
+  <dl>
+    <dt>HTTP Status</dt>
+    <dd><code><strong>422</strong></code></dd>
+    <dt>JSON body</dt>
+    <dd>
+      <code style="color:#586e75">
+        {
+          success: <span style="color:#b58900">false</span>,
+          error: <span style="color:#269186"><span style="color:#c60000">"</span>Invalid tag: "%".\nAt (haml):1<span style="color:#c60000">"</span></span>
+        }
+      </code>
+    </dd>
+  </dl>
+
+</section>

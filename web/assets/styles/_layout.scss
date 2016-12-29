@@ -1,0 +1,35 @@
+@import "variables";
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+#app {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100%;
+  overflow: auto;
+  box-shadow: 0 0 15px 1px $border-color;
+}
+
+#top-menu {
+  margin: 1em;
+}
+
+#header {
+  border-bottom: 1px solid $border-color;
+}
+
+#content {
+  margin: 1em;
+  section {
+    padding-left: 1em;
+  }
+}
+
+#footer {
+  border-top: 1px solid $border-color;
+
+}

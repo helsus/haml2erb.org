@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta
+    content="<%= content_for?(:meta_desc) ? yield_content(:meta_desc) : 'Online Haml to ERb/HTML converter. Convert your ugly Haml code to pretty ERb' %>"
+    name="description"/>
+  <meta content="haml2erb, haml to erb, haml2html, haml to html, online converter" name="keywords"/>
+  <link rel="stylesheet" type="text/css" href="<%= url("/styles/styles.css") %>"/>
+  <link rel="icon" href="/images/favicon.ico?v=12">
+  <title>
+    <%= content_for?(:title) ? yield_content(:title) : 'Haml to ERb/HTML online converter' %>
+    – haml2erb.org
+  </title>
+</head>
+<body>
+  <section id="app">
+    <header id="header">
+      <%= erb :_menu %>
+    </header>
+    <section id="content">
+      <%= yield %>
+    </section>
+    <footer id="footer">
+      <%= erb :_footer %>
+    </footer>
+  </section>
+  <script src="<%= url("/scripts/main.js") %>"></script>
+  <%= erb :'utils/_google_analytics' if Sinatra::Application.production? %>
+</body>
+</html>

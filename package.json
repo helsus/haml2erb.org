@@ -1,0 +1,32 @@
+{
+  "name": "haml2erb.org",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "url": "git@github.com:helsus/haml2erb.git",
+    "type": "git"
+  },
+  "scripts": {
+    "start": "yarn run webpack -- --watch"
+  },
+  "author": "Ivan Buiko",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.4",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.1.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "whatwg-fetch": "^2.0.1"
+  }
+}
